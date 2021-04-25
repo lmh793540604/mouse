@@ -43,117 +43,70 @@ public class Mouse implements Runnable {
         Integer x;
         Integer y;
         Random random = new Random();
-        //每5秒移动一次
-        robot.delay(5000);
+
         while (!isStop) {
-            robot.delay(26000);
-            //随机生成坐标。
             x = random.nextInt(x2-x1)+x1;
             y = random.nextInt(y2-y1)+y1;
-            robot.delay(300);
-            //开始移动
             moveMouse(robot,x,y);
-            moveMouse(robot,x,y);
-            System.out.println("移动");
             robot.mousePress(InputEvent.BUTTON1_MASK);
+            robot.delay( random.nextInt(50)+50);
+            robot.mouseRelease(InputEvent.BUTTON1_MASK);
+            robot.delay(26000);
+            robot.mousePress(InputEvent.BUTTON1_MASK);
+            robot.delay( random.nextInt(50)+50);
             robot.mouseRelease(InputEvent.BUTTON1_MASK);
             robot.mousePress(InputEvent.BUTTON1_MASK);
+            robot.delay( random.nextInt(50)+50);
             robot.mouseRelease(InputEvent.BUTTON1_MASK);
             robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.delay(1500);
-            System.out.println("睡眠0.3s");
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
+            robot.delay( random.nextInt(50)+50);
             robot.mouseRelease(InputEvent.BUTTON1_MASK);
             //随机生成坐标。
             x = random.nextInt(x4-x3)+x3;
             y = random.nextInt(y4-y3)+y3;
             moveMouse(robot,x,y);
-            System.out.println("移动");
             robot.mousePress(InputEvent.BUTTON1_MASK);
+            robot.delay( random.nextInt(50)+50);
             robot.mouseRelease(InputEvent.BUTTON1_MASK);
             robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            System.out.println("睡眠0.3s");
-            robot.mousePress(InputEvent.BUTTON1_MASK);
+            robot.delay( random.nextInt(50)+50);
             robot.mouseRelease(InputEvent.BUTTON1_MASK);
             robot.mousePress(InputEvent.BUTTON1_MASK);
+            robot.delay( random.nextInt(50)+50);
             robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            System.out.println("睡眠1.5s");
+            robot.mousePress(InputEvent.BUTTON1_MASK);
+            robot.delay( random.nextInt(50)+50);
+            robot.mouseRelease(InputEvent.BUTTON1_MASK);
 
-            robot.delay(500);
-            System.out.println("睡眠0.5s");
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-//            System.out.println("睡眠0.5s");
-            robot.delay(1000);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.delay(800);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.delay(800);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
             x = random.nextInt(x2-x1)+x1;
             y = random.nextInt(y2-y1)+y1;
-            //开始移动
             moveMouse(robot,x,y);
-            System.out.println("移动");
             robot.mousePress(InputEvent.BUTTON1_MASK);
+            robot.delay( random.nextInt(50)+50);
             robot.mouseRelease(InputEvent.BUTTON1_MASK);
             robot.mousePress(InputEvent.BUTTON1_MASK);
+            robot.delay( random.nextInt(50)+50);
             robot.mouseRelease(InputEvent.BUTTON1_MASK);
             robot.mousePress(InputEvent.BUTTON1_MASK);
-            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-            robot.delay(2500);
-            System.out.println("睡眠2s");
-            robot.mousePress(InputEvent.BUTTON1_MASK);
+            robot.delay( random.nextInt(50)+50);
             robot.mouseRelease(InputEvent.BUTTON1_MASK);
             robot.mousePress(InputEvent.BUTTON1_MASK);
+            robot.delay( random.nextInt(50)+50);
             robot.mouseRelease(InputEvent.BUTTON1_MASK);
+
+            x = random.nextInt(x4-x3)+x3;
+            y = random.nextInt(y4-y3)+y3;
+            moveMouse(robot,x,y);
+            robot.mousePress(InputEvent.BUTTON1_MASK);
+            robot.delay( random.nextInt(50)+50);
+            robot.mouseRelease(InputEvent.BUTTON1_MASK);
+            robot.mousePress(InputEvent.BUTTON1_MASK);
+            robot.delay( random.nextInt(50)+50);
+            robot.mouseRelease(InputEvent.BUTTON1_MASK);
+            robot.mousePress(InputEvent.BUTTON1_MASK);
+            robot.delay( random.nextInt(50)+50);
+            robot.mouseRelease(InputEvent.BUTTON1_MASK);
+            robot.delay( 1500);
         }
     }
 
@@ -216,7 +169,7 @@ public class Mouse implements Runnable {
 //        Integer y4=Integer.valueOf(scanner("请输入y4："));
 //        System.out.println(y4);
 //        Integer sleepTimes=Integer.valueOf(scanner("请输入睡眠时间：");
-        Mouse m = new Mouse(876 ,913 ,632 ,659 ,1806 ,1842 ,633 ,666 ,0);
+        Mouse m = new Mouse(754 ,789 ,415 ,440 ,1806 ,1842 ,633 ,666 ,0);
         m.run();
     }
 
